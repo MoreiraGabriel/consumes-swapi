@@ -1,0 +1,4 @@
+feign:
+  apis:
+    swapi:
+      url: https://swapi.dev/api
