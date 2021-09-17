@@ -2,6 +2,7 @@ package com.sw.api.starwars.dto.request;
 
 import javax.validation.constraints.NotBlank;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ApiModel(value = "Request para planeta.")
 public class PlanetRequest {
 
 	@NotBlank(message = "Name required")

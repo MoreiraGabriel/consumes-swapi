@@ -3,11 +3,13 @@ package com.sw.api.starwars.dto;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@ApiModel(value = "DTO para retorno da api swapi.")
 public class PlanetApiDto {
 	
 	private String name;

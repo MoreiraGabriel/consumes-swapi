@@ -5,11 +5,13 @@ import java.util.stream.Collectors;
 
 import com.sw.api.starwars.entity.Planet;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@ApiModel(value = "DTO para planeta.")
 public class PlanetDto {
 	
 	private String id;
