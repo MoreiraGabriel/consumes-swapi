@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PlanetRequest {
 
-	@NotBlank
+	@NotBlank(message = "Name required")
 	private String name;
 	
-	@NotBlank
+	@NotBlank(message = "climate required")
 	private String climate;
 	
-	@NotBlank
+	@NotBlank(message = "terrain required")
 	private String terrain;
 	
 	private Integer numFilms;
