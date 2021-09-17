@@ -4,13 +4,19 @@
   <p align="center">Projeto para consumir dados dos planetas da API pública do Star Wars (https://swapi.co/)</p>
 
 ## Como usar a api
-### Base
+### Base de dados
   <h4 align="center"> 
   	Base de dados PostgreSQL, documento para subir imagem está no projeto.
-    	Necessário criar base antes de rodar o projeto, projeto está configurado uma para o nome 'starwars'.
+    Necessário criar base antes de rodar o projeto, projeto está configurado uma para com o nome 'starwars'.
+  </h4>
+  
+### API
+  <h4 align="center"> 
+  	Para buscar os planetas da API pública do Star Wars utilizar o endpoint /planet/api
+    Este endpoint atualiza a base só com os dados da busca
   </h4>
   
 ### Documentação
   <h4 align="center"> 
-  	Swagger usado para documentação do projeto.
+  	Swagger usado para documentação dos endpoints do projeto.
   </h4>
