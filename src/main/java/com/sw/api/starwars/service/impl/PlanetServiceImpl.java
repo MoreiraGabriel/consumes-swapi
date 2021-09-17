@@ -45,12 +45,12 @@ public class PlanetServiceImpl implements PlanetService {
 	
 	@Override
 	public PlanetApiDto getByIdApi(String id) {
-		log.info("getByIdApi - Start" + id);
+		log.info("getByIdApi - Start: " + id);
 		
 		Results result = swapiClient.getPlanetsById(id);
 		PlanetApiDto dto = new PlanetApiDto(result);
 		
-		log.info("getByIdApi - End" + id);
+		log.info("getByIdApi - End: " + id);
 		
 		return dto;
 	}
@@ -92,7 +92,7 @@ public class PlanetServiceImpl implements PlanetService {
 	
 	@Override
 	public PlanetDto getById(String id) {
-		log.info("getById - Start " + id);
+		log.info("getById - Start: " + id);
 		
 		Optional<Planet> planet = repository.findById(id);
 		
@@ -101,7 +101,7 @@ public class PlanetServiceImpl implements PlanetService {
 		}
 		PlanetDto dto = new PlanetDto(planet.get());
 		
-		log.info("getById - End " + id);
+		log.info("getById - End: " + id);
 		
 		return dto;
 	}
@@ -119,7 +119,7 @@ public class PlanetServiceImpl implements PlanetService {
 
 	@Override
 	public PlanetDto update(String id, PlanetRequest request) {
-		log.info("update - Start " + id);
+		log.info("update - Start: " + id);
 		
 		if(!repository.existsById(id)){
 			throw new PlanetNotFoundException("Planet not Found: " + id);
@@ -129,14 +129,14 @@ public class PlanetServiceImpl implements PlanetService {
 		planet.setId(id);
 		planet = repository.save(planet);
 		
-		log.info("update - End " + id);
+		log.info("update - End: " + id);
 		
 		return new PlanetDto(planet);
 	}
 
 	@Override
 	public void delete(String id) {
-		log.info("delete - Start " + id);
+		log.info("delete - Start: " + id);
 		
 		if(!repository.existsById(id)){
 			throw new PlanetNotFoundException("Planet not Found: " + id);
@@ -144,7 +144,7 @@ public class PlanetServiceImpl implements PlanetService {
 		
 		repository.deleteById(id);
 		
-		log.info("delete - End " + id);
+		log.info("delete - End: " + id);
 	}
 
 }

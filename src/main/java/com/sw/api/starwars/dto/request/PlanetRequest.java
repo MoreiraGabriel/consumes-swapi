@@ -2,11 +2,13 @@ package com.sw.api.starwars.dto.request;
 
 import javax.validation.constraints.NotBlank;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class PlanetRequest {
 
 	@NotBlank(message = "Name required")
