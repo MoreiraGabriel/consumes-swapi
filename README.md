@@ -1,4 +1,4 @@
-# consumes-swapi
+# Consumes-swapi
 
 ## Descrição do Projeto
   <p align="center">Projeto para consumir dados dos planetas da API pública do Star Wars (https://swapi.co/)</p>
